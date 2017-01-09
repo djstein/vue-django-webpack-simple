@@ -8,12 +8,12 @@ module.exports = {
   entry: [
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
-      './assets/js/index'
+      './src/index'
   ],
   output: {
-      path: path.resolve('./assets/bundles/'),
+      path: path.resolve('./src/assets/bundles/'),
       filename: "[name]-[hash].js",
-      publicPath: 'http://localhost:3000/assets/bundles/', // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
+      publicPath: 'http://localhost:3000/src/assets/bundles/', // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
   },
 
   plugins: [

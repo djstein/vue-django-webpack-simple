@@ -92,5 +92,9 @@ ENV/
 secrets.py
 db.sqlite3
 
+# JavaScript
+node_modules/
+webpack-stats.json
+
 # MacOS
 .DS_Store
