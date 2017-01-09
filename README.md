@@ -7,8 +7,8 @@
 ##Installation
 ```bash
 # Virtual environment
-virtualenv env
-. env/bin/activate
+virtualenv -p python3 env
+source env/bin/activate
 
 pip install -r requirements.txt
 npm install
@@ -17,7 +17,7 @@ npm install
 ## Run Servers
 ```bash
 # Run Django server
-./manage.py runserver
+python manage.py runserver
 
 # Run node server
 node server.js
