@@ -1,4 +1,11 @@
-# Vue.js and Django Web Application
+<h1 align="center">
+  Vue.js and Django Web Application
+</h1>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/djstein/vue-django-webpack/master/src/assets/img/logo.png" width="75" />
+  <img src="https://raw.githubusercontent.com/djstein/vue-django-webpack/master/src/assets/img/django.png" width="200" />
+</p>
 
 - Use of Vue.js in component form
 - Webpack building the JavaScript and CSS portions of the application
