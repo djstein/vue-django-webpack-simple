@@ -9,7 +9,6 @@ __pycache__/
 # Distribution / packaging
 .Python
 env/
-build/
 develop-eggs/
 dist/
 downloads/
@@ -95,6 +94,9 @@ db.sqlite3
 # JavaScript
 node_modules/
 webpack-stats.json
+
+# Do not store .js build files from static
+main-*.js
 
 # MacOS
 .DS_Store

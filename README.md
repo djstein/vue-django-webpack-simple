@@ -14,13 +14,29 @@ pip install -r requirements.txt
 npm install
 ```
 
-## Run Servers
+## Development
 ```bash
 # Run Django server
 python manage.py runserver
 
 # Run node server
-node server.js
+npm run watch
+```
+
+## Webpack Build
+```bash
+# Local Build
+npm run build
+
+# Production Build
+npm run build-production
+```
+
+# Build the JavaScript Package
+npm run build
+
+# Run Django server
+python manage.py runserver
 ```
 
 ## Sources 
@@ -31,3 +47,6 @@ Compilation of these resources:
 https://github.com/vuejs-templates/webpack-simple/tree/master/template
 
 https://github.com/owais/django-webpack-loader/tree/master/examples
+
+## Contributions
+Please feel free to pull, fork, or add suggestions
