@@ -57,6 +57,7 @@ npm run build-production
 ## Sources 
 
 These resources were heavily referenced:
+
 https://github.com/vuejs-templates/webpack-simple/tree/master/template
 
 https://github.com/owais/django-webpack-loader/tree/master/examples
