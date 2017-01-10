@@ -1,11 +1,19 @@
 # Vue.js and Django Web Application
 
-- use of Vue.js in component form
-- Webpack building the JavaScript application
-- Django serving builds with django-wepack-loader
+- Use of Vue.js in component form
+- Webpack building the JavaScript and CSS portions of the application
+- Django serving builds with django-webpack-loader
+
+The advantage to this over a pure Vue.js application are those niceties included in Django's core library such as database managment and URL routing. This also includes the ability to add third party applications such as, the Django REST Framework, quickly and painfree.
+
+Once a bundle has been created with Webpack, it can easily be served with Django's django.contrib.staticfiles app.
 
 ##Installation
+Setup a new Python 3 virtualenv and install the pip and npm requirements.
 ```bash
+git clone https://github.com/djstein/vue-django-webpack.git
+cd vue-django-webpack
+
 # Virtual environment
 virtualenv -p python3 env
 source env/bin/activate
@@ -15,34 +23,40 @@ npm install
 ```
 
 ## Development
+During development it is useful to access the hot-load features without the need to rebuild the application.
+Do so by running Django in one terminal and the node server in another.
 ```bash
-# Run Django server
+# Run Django webserver
 python manage.py runserver
 
-# Run node server
+# Run node webserver
 npm run watch
 ```
+Any changes made to `src/App.vue` will now be seen automatically. Feel free to add components / new pages / etc.
 
 ## Webpack Build
+### Local
+To use the application without the use of the node server, use webpack to create a build. This will automatically switch the path needed in webpack-stats.json to reprsent the local build development bundles (.js and .css), with no changes to Django for local development.
 ```bash
 # Local Build
 npm run build
+```
+Django can continue to run while the build is recreated, however it is advised to stop the webserver and clear the browswer cache when creating new builds.
+```bash
+# Run Django webserver
+python manage.py runserver
+```
 
+### Production
+For production builds, using build-proudction will pack and UglifyJS the application. IT IS RECOMMENDED TO STILL COMPLETE THE  [DJANGO](https://docs.djangoproject.com/en/dev/howto/deployment/checklist/) AND [VUE.JS](https://vuejs.org/v2/guide/deployment.html) PRODUCTION DOCUMENTATION BEFORE DEPLOYING.
+```bash
 # Production Build
 npm run build-production
 ```
 
-# Build the JavaScript Package
-npm run build
-
-# Run Django server
-python manage.py runserver
-```
-
 ## Sources 
-Any changes made to `assets/js/App.vue` will now be seen automatically.
 
-Compilation of these resources:
+These resources were heavily referenced:
 
 https://github.com/vuejs-templates/webpack-simple/tree/master/template
 
