@@ -48,6 +48,7 @@ python manage.py runserver
 ```
 
 ### Production
+**Production Instructions Are Not Complete**
 For production builds, using build-proudction will pack and UglifyJS the application. IT IS RECOMMENDED TO STILL COMPLETE THE  [DJANGO](https://docs.djangoproject.com/en/dev/howto/deployment/checklist/) AND [VUE.JS](https://vuejs.org/v2/guide/deployment.html) PRODUCTION DOCUMENTATION BEFORE DEPLOYING.
 ```bash
 # Production Build
