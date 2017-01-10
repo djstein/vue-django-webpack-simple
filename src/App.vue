@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/img/logo.png">
+    <h1>+</h1>
+    <img id="django" src="./assets/img/django.png">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -38,6 +40,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#django {
+  max-width:30%;
+  height:auto;
 }
 h1, h2 {
   font-weight: normal;
