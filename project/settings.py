@@ -101,24 +101,23 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/',
+    os.path.join(BASE_DIR, 'src/bundles/'),
 ]
 
 WEBPACK_LOADER = {
     'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'static/',
+        'BUNDLE_DIR_NAME': 'src/bundles/',
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json')
     }
 }
 
-if not DEBUG:
-    WEBPACK_LOADER['DEFAULT'].update({
-        'BUNDLE_DIR_NAME': 'static/',
-        'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats-prod.json')
-    })
+# if not DEBUG:
+#     WEBPACK_LOADER['DEFAULT'].update({
+#         'BUNDLE_DIR_NAME': 'static/',
+#         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats-prod.json')
+#     })

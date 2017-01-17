@@ -11,9 +11,10 @@ module.exports = {
       '../src/main'
   ],
   output: {
-      path: path.resolve('./static/'),
+      path: path.resolve('./src/bundles/'),
       filename: "[name]-[hash].js",
-      publicPath: 'http://localhost:8000/static/', // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
+      // publicPath: 'http://localhost:8000/static/', // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
+      publicPath: ' http://ostest-boostdev.rhcloud.com/static/', // Tell django to use this URL to load packages and not use STATIC_URL + bundle_name
   },
 
   plugins: [
